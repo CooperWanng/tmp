@@ -8,7 +8,7 @@
 2、腾讯云、阿里云有此类服务
 
 三、v2ray配置
-通过v2ray-agent自动配置节点，参考https://github.com/2dust/v2rayN
+通过v2ray-agent自动配置节点，参考https://github.com/mack-a/v2ray-agent
 1、登录虚拟机
 2、安装vasma
 3、运行vasma，选择安装，选择安装x-ray
