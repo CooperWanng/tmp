@@ -1,0 +1,80 @@
+version: "3"
+services:
+
+  mysql8:
+    image: mysql:8.0
+    container_name: mysql8.0
+    command: [
+        'mysqld',
+        '--character-set-server','utf8mb4',
+        '--collation-server','utf8mb4_unicode_ci',
+        '--init_connect','SET NAMES utf8',
+    ]
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - TZ=Asia/Shanghai
+    volumes:
+      - D:\docker\mysql_8.0:/var/lib/mysql:rw # 数据挂载
+    ports:
+      - '3306:3306'
+    restart: always
+    tty: true
+    stdin_open: true
+    privileged: true
+
+  mysql5:
+    image: mysql:5.7
+    container_name: mysql5.7
+    command: [
+        'mysqld',
+        '--character-set-server','utf8mb4',
+        '--collation-server','utf8mb4_unicode_ci',
+        '--init_connect','SET NAMES utf8',
+    ]
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - TZ=Asia/Shanghai
+    volumes:
+      - D:\docker\mysql_5.7:/var/lib/mysql:rw # 数据挂载
+    ports:
+      - '3307:3306'
+    restart: always
+    tty: true
+    stdin_open: true
+    privileged: true
+
+  redis:
+    image: redis:5.0
+    container_name: redis5.0
+    command: [
+        'redis-server',
+        '--logfile','redis.log',
+        '--requirepass','123456',
+        '--appendonly','yes',
+    ]
+    volumes:
+      - D:\docker\redis_5.0:/data # redis持久化数据挂载
+    ports:
+      - '6379:6379'
+    restart: always
+    tty: true
+    stdin_open: true
+    privileged: true
+
+  rabbitmq:
+    image: rabbitmq:3.8-management
+    container_name: rabbitmq3.8-management
+    hostname: 'my_local_host_name'  # host_name保持不变，从而读取持久化数据
+    environment:
+      - RABBITMQ_DEFAULT_VHOST=/
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=123456
+    volumes:
+      - D:\docker\rabbitmq_3.8-management:/var/lib/rabbitmq # mq持久化数据挂载
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    restart: always
+    tty: true
+    stdin_open: true
+    privileged: true
