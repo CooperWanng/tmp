@@ -11,9 +11,9 @@
 
 `三、页面使用过程中保持连接`
 - 浏览器安装自动刷新页面的插件，如[Just Refresh](https://chrome.google.com/webstore/detail/just-refresh/pgaimkehoiabhliejchbnamlboniofpd)
-- 配置插件，配置页面为 chrome-extension://${extensionID}/options.html  
+- 配置插件，一般30s刷新此役即可满足连接要求，配置页面为 chrome-extension://${extensionID}/options.html  
 - 开启一个chatgpt同域下的页面，如https://chat.openai.com/404
-- 设定刷新时间，一般30s刷新此役即可满足连接要求
+- 开启插件，点击插件图标后，会显示刷新倒计时
 
 `四、chatGPT Plus、API调用`
 - 需要绑定一张国外信用卡，openai不对国内、俄罗斯开放
