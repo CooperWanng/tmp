@@ -11,6 +11,7 @@
 
 `三、页面使用过程中保持连接`
 - 浏览器安装自动刷新页面的插件，如[Just Refresh](https://chrome.google.com/webstore/detail/just-refresh/pgaimkehoiabhliejchbnamlboniofpd)
+- 配置插件，配置页面为 chrome-extension://${extensionID}/options.html  
 - 开启一个chatgpt同域下的页面，如https://chat.openai.com/404
 - 设定刷新时间，一般30s刷新此役即可满足连接要求
 
