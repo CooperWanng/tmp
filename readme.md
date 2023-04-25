@@ -7,5 +7,6 @@
 - [mysql安装配置(centos)](mysql_deploy.py)
 - [Kubernets集群搭建(centos)](kubernets_deploy.md)
 - [GlusterFS集群搭建(centos)](glusterfs_deploy.md)
+- [etcd集群搭建(centos)](etcd_deploy.md)
 - [vmware虚拟机配置](vmware.md)
 
